@@ -13,15 +13,16 @@
 
   <div>
     <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: "form-control w-50" %>
   </div>
 
   <div>
-    <%= form.label :body, style: "display: block" %>
-    <%= form.text_area :body %>
+    <%= form.label :body %>
+    <%= form.rich_text_area :body %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= button_to "Submit", @post, method: :submit, class: "btn btn-primary w-25 mt-2" %>
+    <%# <%= form.submit %> 
   </div>
 <% end %>
